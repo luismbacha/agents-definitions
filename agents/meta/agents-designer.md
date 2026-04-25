@@ -71,7 +71,7 @@ Senior Meta-Prompt Engineer and Logic Architect. Specializes in translating comp
 
 ## Output Format
 
-Return a Markdown document with the following sections:
+Return a Markdown document written in English with the following sections:
 
 ### 1. Agent Name
 
