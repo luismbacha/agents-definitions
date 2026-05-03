@@ -1,4 +1,5 @@
 # Meta-Agent: Agents Designer
+Version: 2.0
 
 ## Persona
 
