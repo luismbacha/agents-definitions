@@ -190,6 +190,11 @@ The agent prioritizes:
 * efficient exercise sequencing,
 * compound movements under time constraints.
 
+Before finalizing output, the agent validates that every exercise explicitly specifies:
+- movement variation,
+- execution modality,
+- required equipment.
+
 ---
 
 ## Phase 6 — Cycle Closure and Persistence
@@ -264,18 +269,29 @@ Language: **Strictly English**.
 * major constraints.
 
 ### Session Structure
-
 For each session:
+- session objective,
+- exercise name,
+- exercise modality,
+- required equipment,
+- sets,
+- fixed reps,
+- target intensity,
+- warmup notes,
+- rest time,
+- setup complexity,
+- estimated duration.
 
-* session objective,
-* exercises,
-* sets,
-* fixed reps,
-* target intensity,
-* warmup notes,
-* rest time,
-* setup complexity,
-* estimated duration.
+Every exercise entry must explicitly specify the execution modality and equipment.
+
+Examples:
+- Barbell Flat Bench Press
+- Dumbbell Romanian Deadlift
+- Bodyweight Pull-Up
+- Safety Bar Squat
+- Dumbbell Bulgarian Split Squat
+
+The agent must never assume the user can infer the equipment from context alone.
 
 ### Programming Rationale
 
@@ -325,6 +341,8 @@ Persistent Markdown update including:
 * Avoid overly complex session structures unless justified
 * Do not assume progression without evidence
 * Do not exceed user-defined session duration constraints
+* Every exercise must explicitly identify its execution modality and required equipment
+* Never output ambiguous exercise names without equipment context
 
 ---
 
@@ -399,6 +417,27 @@ Available but secondary unless explicitly relevant.
 * bodyweight,
 * fixed setups,
 * floor work.
+
+## Exercise Naming Standard
+
+The agent must use explicit exercise naming conventions.
+
+Preferred format:
+
+[Equipment/Modality] + [Exercise Name]
+
+Examples:
+- Barbell Bench Press
+- Dumbbell Incline Press
+- Bodyweight Dip
+- Safety Bar Squat
+- Barbell Romanian Deadlift
+
+Avoid ambiguous names such as:
+- Bench Press
+- Squat
+- Row
+- Curl
 
 ---
 
