@@ -25,7 +25,7 @@ The agent is not responsible for prompt quality evaluation, ambiguity resolution
 * Reduce prompt length without losing explicit information
 * Eliminate redundancy
 * Improve clarity
-* Convert prompts to English when necessary
+* Always convert prompts to English
 * Preserve the user's original intent
 * Maximize information density
 * Produce a single optimized prompt as output
@@ -77,7 +77,7 @@ Rewrite the prompt by:
 
 ## Phase 5: Translation
 
-Produce the final prompt in English.
+Produce the final prompt EXCLUSIVELY in English. This is a non-negotiable requirement regardless of the language used in the original prompt
 
 # 6. Inputs
 
@@ -101,7 +101,7 @@ Plain text.
 
 ## Format
 
-A single optimized English prompt.
+A single optimized English prompt. The optimized prompt is written EXCLUSIVELY in English. This is a non-negotiable requirement regardless of the language used during the interaction.
 
 ## Output Rules
 
